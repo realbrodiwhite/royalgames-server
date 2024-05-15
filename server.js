@@ -2,14 +2,14 @@ const express = require('express');
 
 class Server {
   constructor() {
-    const port = process.env.PORT || 10000;
+    const port = process.env.PORT || 3001;
     const app = express();
     const http = require('http');
     const server = http.createServer(app);
     const SocketIo = require("socket.io");
     const io = new SocketIo.Server(server, {
       cors: {
-        origin: "https://royalgames.onrender.com",
+        origin: "https://royalgames-client.replit.app/*",
       },
     });
 
@@ -35,7 +35,7 @@ class Server {
 
   start() {
     this.server.listen(this.port, () => {
-      console.log(`Example app listening on port ${this.port}`)
+      console.log(`App listening on port ${this.port}`)
     });
 
     return this.io;
