@@ -13,7 +13,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "md5": "^2.3.0",
-    "socket.io": "^4.6.0",
+    "socket.io": "^4.8.0",
     "sqlite3": "^5.1.7",
     "uuid": "^10.0.0"
   }
